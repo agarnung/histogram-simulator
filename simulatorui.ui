@@ -25,14 +25,14 @@
      <item>
       <widget class="QPushButton" name="saveImagesButton">
        <property name="text">
-        <string>GUARDAR IMÁGENES EN...</string>
+        <string>SAVE IMAGES IN...</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="cargarButton">
        <property name="text">
-        <string>CARGAR IMAGEN</string>
+        <string>LOAD IMAGE</string>
        </property>
       </widget>
      </item>
@@ -41,7 +41,7 @@
    <item row="8" column="0">
     <widget class="QPushButton" name="saveTfButton">
      <property name="text">
-      <string>GUARDAR LUT </string>
+      <string>SAVE LUT </string>
      </property>
     </widget>
    </item>
@@ -50,14 +50,14 @@
      <item>
       <widget class="QPushButton" name="addPointButton">
        <property name="text">
-        <string>AÑADIR PUNTO DE CONTROL</string>
+        <string>ADD CONTROL POINT</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="deleteLastPointButton">
        <property name="text">
-        <string>BORRAR ÚLTIMO PUNTO</string>
+        <string>REMOVE LAST CONTROL POINT</string>
        </property>
       </widget>
      </item>
@@ -66,7 +66,7 @@
    <item row="5" column="0">
     <widget class="QPushButton" name="transformButton">
      <property name="text">
-      <string>TRANSFORMAR</string>
+      <string>TRANSFORM</string>
      </property>
     </widget>
    </item>
@@ -335,14 +335,14 @@
      <item>
       <widget class="QPushButton" name="saveCurveButton">
        <property name="text">
-        <string>GUARDAR CURVA</string>
+        <string>SAVE CURVE</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="loadCurveButton">
        <property name="text">
-        <string>CARGAR CURVA</string>
+        <string>LOAD CURVE</string>
        </property>
       </widget>
      </item>
@@ -415,7 +415,7 @@
    <item row="4" column="0">
     <widget class="QPushButton" name="createLUTControl">
      <property name="text">
-      <string>CREAR LUT CON PUNTOS DE CONTROL</string>
+      <string>CREATE LUT WITH CONTROL POINTS</string>
      </property>
     </widget>
    </item>

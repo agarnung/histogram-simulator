@@ -10,11 +10,14 @@ class Simulator : public QObject
 
     public:
         explicit Simulator(QObject *parent = nullptr);
+        ~Simulator();
 
         int init();
+        int closeSim();
 
     private:
         SimulatorUi* mSimulatorUi = nullptr;
 
-    signals:
+    public slots:
+        void on_saveJSON(const QJsonDocument& json_d);
 };
