@@ -421,6 +421,12 @@ void SimulatorUi::on_saveImagesButton_released()
             cv::imwrite(modifiedPath.toStdString(), mModified);
         }
     }
+
+    QMessageBox msgBox;
+    msgBox.setWindowTitle("Images saved");
+    msgBox.setText("Before and after images saved in " + directory);
+    msgBox.setStandardButtons(QMessageBox::Ok);
+    msgBox.exec();
 }
 
 ControlPoint::ControlPoint(qreal x, qreal y, qreal width, qreal height, SimulatorUi* SimulatorUi, QGraphicsItem* parent, QString name)
@@ -624,9 +630,15 @@ void SimulatorUi::on_createLUTControl_released()
     createLUT();
     qDebug() << QObject::tr("%1 - %2 - LUT actualizada con los puntos de control.").arg(this->metaObject()->className()).arg(__func__ );
 
-    //	std::cout << std::endl << std::endl << "on_createLUTControl_released - mLUT: " << std::endl ;
-    //	for (unsigned int i = 0; i < 256; ++i)
-    //		std::cout << i << ":" << QString::number(mLUT.at<uchar>(i)).toStdString() << "  ";
+    // std::cout << std::endl << std::endl << "on_createLUTControl_released - mLUT: " << std::endl ;
+    // for (unsigned int i = 0; i < 256; ++i)
+    //     std::cout << i << ":" << QString::number(mLUT.at<uchar>(i)).toStdString() << "  ";
+
+    QMessageBox msgBox;
+    msgBox.setWindowTitle("LUT created");
+    msgBox.setText("The graylevel transformation is ready");
+    msgBox.setStandardButtons(QMessageBox::Ok);
+    msgBox.exec();
 }
 
 void SimulatorUi::on_saveCurveButton_released()

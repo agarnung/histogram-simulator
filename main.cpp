@@ -1,4 +1,3 @@
-// #include "histogramsimulator.h"
 #include "simulator.h"
 
 #include <QApplication>
@@ -7,8 +6,9 @@ int main(int argc, char* argv[])
 {
     QApplication a(argc, argv);
 
-    // HistogramSimulator sim;
-    // sim.init();
+    a.setApplicationName("HistogramSimulator");
+    a.setApplicationVersion("0.0");
+    a.setStyle("fusion");
 
     Simulator sim;
     sim.init();

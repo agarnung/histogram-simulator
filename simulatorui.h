@@ -24,6 +24,7 @@
 #include <QScreen>
 #include <QGraphicsSceneMouseEvent>
 #include <QObject>
+#include <QMessageBox>
 
 #include <opencv4/opencv2/opencv.hpp>
 
