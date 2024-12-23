@@ -774,3 +774,18 @@ cv::Mat SimulatorUi::parseJSONQStringToMat(QString& json)
     return customLUT;
 }
 
+
+void SimulatorUi::on_fullscreenButton_released()
+{
+    this->isFullScreen() ? this->setWindowState(Qt::WindowNoState) :
+                           this->setWindowState(Qt::WindowFullScreen);
+
+    QIcon icon1;
+    this->isFullScreen() ? icon1.addFile(QString::fromUtf8(":/iconosHS/iconosHS/minimize-compress-svgrepo-com.svg"), QSize(), QIcon::Mode::Normal, QIcon::State::Off) :
+                           icon1.addFile(QString::fromUtf8(":/iconosHS/iconosHS/maximize-expand-svgrepo-com.svg"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+    mUi->fullscreenButton->setIcon(icon1);
+    mUi->fullscreenButton->setIconSize(QSize(25, 25));
+
+    this->update();
+}
+

@@ -127,6 +127,7 @@ class SimulatorUi : public QWidget
         void on_createLUTControl_released();
         void on_saveCurveButton_released();
         void on_loadCurveButton_released();
+        void on_fullscreenButton_released();
 
         friend class ControlPoint;
 };
