@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/configsHS">
+        <file>configsHS/style.qss</file>
+        <file>configsHS/help.html</file>
+    </qresource>
+    <qresource prefix="/iconosHS">
+        <file>iconosHS/help-circle.svg</file>
+    </qresource>
+</RCC>

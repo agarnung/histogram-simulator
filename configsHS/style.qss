@@ -1,0 +1,53 @@
+/* Fondo gris claro para el widget principal */
+QWidget {
+    background-color: #F0F0F0;
+}
+
+/* Botones principales */
+QPushButton {
+    background-color: #9D9D9D;
+    color: #FFFFFF;
+    border: 1px solid #333333;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 12px; /* Ajustar el tamaño de la letra */
+    font-weight: bold; /* Hacer la letra más gruesa */
+}
+
+QPushButton:hover {
+    background-color: #666666;
+}
+
+/* Etiquetas */
+QLabel {
+    color: #333333;
+    font-size: 12px; /* Ajustar el tamaño de la letra */
+    font-weight: bold; /* Hacer la letra más gruesa */
+}
+
+/* Cuadros de texto y áreas de texto */
+QPlainTextEdit {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-size: 12px; /* Ajustar el tamaño de la letra */
+    color: #333333;
+}
+
+/* Combobox personalizado */
+CustomComboBox {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-size: 12px; /* Ajustar el tamaño de la letra */
+    font-weight: bold; /* Hacer la letra más gruesa */
+    padding: 8px;
+    color: #000000;  /* Color del texto negro */
+}
+
+/* Sliders */
+QSlider {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 2px;
+}
