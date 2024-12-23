@@ -409,6 +409,9 @@ void SimulatorUi::on_saveImagesButton_released()
 {
     QString directory = QFileDialog::getExistingDirectory(this, tr("Seleccionar Carpeta"), QDir::homePath());
 
+    if (directory.isEmpty())
+        return;
+
     if (!directory.isEmpty())
     {
         QDir dir = directory;
@@ -658,7 +661,11 @@ void SimulatorUi::on_saveCurveButton_released()
     json_o["controlPoints"] = jsonArray;
 
     const QJsonDocument json_d(json_o);
-    QString fileName = QFileDialog::getSaveFileName(this, tr("Guardar archivo JSON"), "", tr("Archivos JSON (*.json)"));
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Save JSON file"), QDir::currentPath(), tr("JSON files(*.json)"));
+
+    if (fileName.isEmpty())
+        return;
+
     if (!fileName.isEmpty())
     {
         QFile file(fileName + ".json");
@@ -670,6 +677,12 @@ void SimulatorUi::on_saveCurveButton_released()
         else
             qDebug() << QObject::tr("%1 - %2 - No se pudo abrir el archivo JSON para escribir.").arg(this->metaObject()->className()).arg(__func__);
     }
+
+    QMessageBox msgBox;
+    msgBox.setWindowTitle("Curve saved");
+    msgBox.setText("Curve successfully saved in " + fileName);
+    msgBox.setStandardButtons(QMessageBox::Ok);
+    msgBox.exec();
 }
 
 void SimulatorUi::on_loadCurveButton_released()

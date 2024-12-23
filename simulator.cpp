@@ -38,10 +38,32 @@ int Simulator::closeSim()
 
 void Simulator::on_saveJSON(const QJsonDocument& json_d)
 {
-    QString cadena = json_d.toJson();
-    cadena = cadena.replace("\n", "");
-    printf("\nWriting JSON: %s\n", QJsonDocument(json_d).toJson().toStdString().c_str());fflush(0);
+    QString jsonString = json_d.toJson(QJsonDocument::Compact);
+    printf("\nWriting JSON: %s\n", jsonString.toStdString().c_str());
+    fflush(0);
 
-    // Escribir en archivo local
-    //...
+    QString fileName = QFileDialog::getSaveFileName(
+        nullptr, "Save JSON", QDir::currentPath(), "JSON Files (*.json)");
+
+    if (fileName.isEmpty())
+        return;
+
+    if (!fileName.endsWith(".json", Qt::CaseInsensitive))
+        fileName += ".json";
+
+    QFile file(fileName);
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        printf("Error opening file for writing.\n");
+        return;
+    }
+
+    QTextStream out(&file);
+    out << jsonString;
+    file.close();
+
+    QMessageBox msgBox;
+    msgBox.setWindowTitle("LUT saved");
+    msgBox.setText("LUT successfully saved in " + fileName);
+    msgBox.setStandardButtons(QMessageBox::Ok);
 }
