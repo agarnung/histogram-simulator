@@ -8,22 +8,17 @@ TARGET = HistogramSimulator
 
 SOURCES += \
     bezierinterpolator.cpp \
-    # histogramsimulator.cpp \
-    # histogramsimulatorui.cpp \
     main.cpp \
     simulator.cpp \
     simulatorui.cpp
 
 HEADERS += \
     bezierinterpolator.h \
-    # histogramsimulator.h \
-    # histogramsimulatorui.h \
     simulator.h \
     simulatorui.h
 
 FORMS += \
     simulatorui.ui \
-    # histogramsimulatorui.ui
 
 RESOURCES += \
     configsHS.qrc
