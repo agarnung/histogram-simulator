@@ -1,7 +1,9 @@
 # histogram-simulator
 An application to perform LUT-based image histogram modification interactively
 
-![alt text](./assets/simulator.png "Simulator overview")
+<p align="center">
+  <img src="./assets/simulator" alt="Simulator overview" title="Simulator overview" />
+</p>
 
 This project uses [OpenCV 4](https://github.com/opencv/opencv/tree/4.10.0) (see additional packages in https://docs.opencv.org/3.4/d7/d9f/tutorial_linux_install.html)
 
