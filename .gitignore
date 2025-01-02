@@ -10,6 +10,8 @@
 
 *.idx
 
+*.qmake.stash
+
 # C++ objects and libs
 *.slo
 *.lo
