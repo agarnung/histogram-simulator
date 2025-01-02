@@ -631,7 +631,7 @@ void SimulatorUi::on_createLUTControl_released()
         return;
 
     createLUT();
-    qDebug() << QObject::tr("%1 - %2 - LUT actualizada con los puntos de control.").arg(this->metaObject()->className()).arg(__func__ );
+    qDebug() << QObject::tr("%1 - %2 - LUT updated with control points.").arg(this->metaObject()->className()).arg(__func__ );
 
     // std::cout << std::endl << std::endl << "on_createLUTControl_released - mLUT: " << std::endl ;
     // for (unsigned int i = 0; i < 256; ++i)
