@@ -13,3 +13,4 @@ _TODO_:
 
 - The idea will be binding all required libraries into a single AppImage, in order to ship the application directly
 - Refractor directories in modules
+- Add safety in TRANSFORM button and other places
