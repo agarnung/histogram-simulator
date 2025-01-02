@@ -63,6 +63,7 @@ void Simulator::on_saveJSON(const QJsonDocument& json_d)
     file.close();
 
     QMessageBox msgBox;
+    msgBox.setIcon(QMessageBox::Information);
     msgBox.setWindowTitle("LUT saved");
     msgBox.setText("LUT successfully saved in " + fileName);
     msgBox.setStandardButtons(QMessageBox::Ok);

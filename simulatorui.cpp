@@ -426,6 +426,7 @@ void SimulatorUi::on_saveImagesButton_released()
     }
 
     QMessageBox msgBox;
+    msgBox.setIcon(QMessageBox::Information);
     msgBox.setWindowTitle("Images saved");
     msgBox.setText("Before and after images saved in " + directory);
     msgBox.setStandardButtons(QMessageBox::Ok);
@@ -638,6 +639,7 @@ void SimulatorUi::on_createLUTControl_released()
     //     std::cout << i << ":" << QString::number(mLUT.at<uchar>(i)).toStdString() << "  ";
 
     QMessageBox msgBox;
+    msgBox.setIcon(QMessageBox::Information);
     msgBox.setWindowTitle("LUT created");
     msgBox.setText("The graylevel transformation is ready");
     msgBox.setStandardButtons(QMessageBox::Ok);
@@ -679,6 +681,7 @@ void SimulatorUi::on_saveCurveButton_released()
     }
 
     QMessageBox msgBox;
+    msgBox.setIcon(QMessageBox::Information);
     msgBox.setWindowTitle("Curve saved");
     msgBox.setText("Curve successfully saved in " + fileName);
     msgBox.setStandardButtons(QMessageBox::Ok);
