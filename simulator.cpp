@@ -8,7 +8,6 @@ Simulator::Simulator(QObject* parent)
 
 Simulator::~Simulator()
 {
-
 }
 
 int Simulator::init()

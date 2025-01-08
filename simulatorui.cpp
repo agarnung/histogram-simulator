@@ -499,7 +499,7 @@ void SimulatorUi::on_rightSlider_valueChanged(int position)
 
 void SimulatorUi::on_cargarButton_released()
 {
-    QString filePath = QFileDialog::getOpenFileName(this, tr("Seleccionar Imagen"), QDir::homePath(), tr("Archivos de Imagen (*.png *.jpg *.jpeg *.bmp *.gif)"));
+    QString filePath = QFileDialog::getOpenFileName(this, tr("Select Image"), QDir::homePath(), tr("Image Files (*.png *.jpg *.jpeg *.bmp *.gif)"));
 
     if (!filePath.isEmpty())
     {
@@ -517,7 +517,7 @@ void SimulatorUi::on_cargarButton_released()
             loadHistogramInView();
         }
         else
-            qDebug() << QObject::tr("%1 - %2 - Error al leer la imagen: '%3'").arg(this->metaObject()->className()).arg(__func__).arg(filePath);
+            qDebug() << QObject::tr("%1 - %2 - Error reading the image: '%3'").arg(this->metaObject()->className()).arg(__func__).arg(filePath);
     }
 }
 
