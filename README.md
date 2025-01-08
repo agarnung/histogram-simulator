@@ -9,6 +9,9 @@ This project uses [OpenCV 4](https://github.com/opencv/opencv/tree/4.10.0) (see 
 
 It is recommended build OpenCV with `-DOPENCV_GENERATE_PKGCONFIG=ON`, see [this](https://stackoverflow.com/questions/15320267/package-opencv-was-not-found-in-the-pkg-config-search-path)
 
+References:
+- Bézier curves approximation thanks to the work of [Maxim Shemanarev](https://agg.sourceforge.net/antigrain.com/research/adaptive_bezier/)
+
 _TODO_:
 
 - The idea will be binding all required libraries into a single AppImage, in order to ship the application directly
