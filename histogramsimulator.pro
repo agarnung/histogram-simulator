@@ -7,21 +7,21 @@ CONFIG += c++20
 TARGET = HistogramSimulator
 
 SOURCES += \
-    bezierinterpolator.cpp \
     main.cpp \
-    simulator.cpp \
-    simulatorui.cpp
+    ./app/bezierinterpolator.cpp \
+    ./app/simulator.cpp \
+    ./app/simulatorui.cpp
 
 HEADERS += \
-    bezierinterpolator.h \
-    simulator.h \
-    simulatorui.h
+    ./app/bezierinterpolator.h \
+    ./app/simulator.h \
+    ./app/simulatorui.h
 
 FORMS += \
-    simulatorui.ui \
+    ./app/simulatorui.ui \
 
 RESOURCES += \
-    configsHS.qrc
+    ./assets/configsHS.qrc
 
 # Enable pkg-config
 CONFIG += link_pkgconfig

@@ -407,7 +407,7 @@
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="configsHS.qrc">
+        <iconset resource="../assets/configsHS.qrc">
          <normaloff>:/iconosHS/iconosHS/help-circle.svg</normaloff>:/iconosHS/iconosHS/help-circle.svg</iconset>
        </property>
        <property name="iconSize">
@@ -436,7 +436,7 @@
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="configsHS.qrc">
+        <iconset resource="../assets/configsHS.qrc">
          <normaloff>:/iconosHS/iconosHS/maximize-expand-svgrepo-com.svg</normaloff>:/iconosHS/iconosHS/maximize-expand-svgrepo-com.svg</iconset>
        </property>
        <property name="iconSize">
@@ -477,7 +477,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="configsHS.qrc"/>
+  <include location="../assets/configsHS.qrc"/>
  </resources>
  <connections/>
 </ui>
