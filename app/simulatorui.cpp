@@ -97,12 +97,18 @@ void SimulatorUi::readJson(const QString& jsonPath)
 
 void SimulatorUi::loadImageInView()
 {
+    if (!mOriginal.data || mOriginal.empty())
+        return;
+
     QImage originalQImage(mOriginal.data, mOriginal.cols, mOriginal.rows, static_cast<int>(mOriginal.step), QImage::Format_Grayscale8);
     mUi->original->setPixmap(QPixmap::fromImage(originalQImage));
 }
 
 void SimulatorUi::loadHistogramInView()
 {
+    if (!mOriginal.data || mOriginal.empty())
+        return;
+
     mOriginalHistogram = calculateHistogram(mOriginal);
     mOriginalHistogram = mOriginalHistogram.scaled(mSceneRect.width(), mSceneRect.height(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
 
@@ -783,7 +789,7 @@ cv::Mat SimulatorUi::parseJSONQStringToMat(QString& json)
         }
     }
 
-    //			std::cout << std::endl << std::endl << "EntityEqualizer - customLUT: " << std::endl ;
+    //			std::cout << std::endl << std::endl << "customLUT: " << std::endl ;
     //			for (unsigned int i = 0; i < 256; ++i)
     //				std::cout << i << ":" << QString::number(customLUT.at<uchar>(i)).toStdString() << "  ";
 
