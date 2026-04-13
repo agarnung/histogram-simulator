@@ -30,6 +30,8 @@ CONFIG += link_pkgconfig
 PKGCONFIG += opencv4
 
 INCLUDEPATH += /usr/local/include/opencv4
+# Para que main.cpp resuelva "simulator.h" (vive en app/) al compilar desde build/
+INCLUDEPATH += app
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -1,0 +1,16 @@
+# App Qt con GUI (WSLg / X11 en el host).
+# Uso: docker compose build && docker compose run --rm app
+# El volumen "." es la carpeta del proyecto (misma que este compose).
+# DISPLAY=:0 encaja con WSLg. Si tu X11 es otro (p. ej. :1): DISPLAY=:1 docker compose run --rm app
+# Si el host exporta un DISPLAY raro, desactívalo: unset DISPLAY; docker compose run --rm app
+
+services:
+  app:
+    build: .
+    image: histogram-simulator:local
+    volumes:
+      - .:/opt/histogram-simulator
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      DISPLAY: ":0"
+      QT_X11_NO_MITSHM: "1"
