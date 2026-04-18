@@ -505,7 +505,7 @@ void SimulatorUi::on_rightSlider_valueChanged(int position)
 
 void SimulatorUi::on_cargarButton_released()
 {
-    QString filePath = QFileDialog::getOpenFileName(this, tr("Select Image"), QDir::homePath(), tr("Image Files (*.png *.jpg *.jpeg *.bmp *.gif)"));
+    QString filePath = QFileDialog::getOpenFileName(this, tr("Select Image"), qEnvironmentVariable("APP_IMAGES_DIR", QDir::homePath()), tr("Image Files (*.png *.jpg *.jpeg *.bmp *.gif)"));
 
     if (!filePath.isEmpty())
     {

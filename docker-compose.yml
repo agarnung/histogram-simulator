@@ -12,5 +12,6 @@ services:
       - .:/opt/histogram-simulator
       - /tmp/.X11-unix:/tmp/.X11-unix
     environment:
-      DISPLAY: ":0"
+      DISPLAY: "${DISPLAY:-:0}"
       QT_X11_NO_MITSHM: "1"
+      APP_IMAGES_DIR: "/opt/histogram-simulator"
